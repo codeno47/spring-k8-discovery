@@ -1,0 +1,12 @@
+apiVersion: skaffold/v2beta1
+kind: Config
+metadata:
+  name: movie-info-service
+build:
+  artifacts:
+  - image: cycloides/movieinfoservice
+deploy:
+  kubectl:
+    manifests:
+    - deployment.yaml
+    - service.yaml

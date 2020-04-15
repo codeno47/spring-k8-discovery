@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: moviecatalogservice
+  name: moviecatalogservice
+spec:
+  ports:
+  - name: 8081-8081
+    port: 8081
+    protocol: TCP
+    targetPort: 8081
+  selector:
+    app: moviecatalogservice
+  type: NodePort
+status:
+  loadBalancer: {}

@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: moviecatalogservice
+  name: moviecatalogservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: moviecatalogservice
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: moviecatalogservice
+    spec:
+      containers:
+      - image: cycloides/moviecatalogservice
+        name: moviecatalogservice
+        resources: {}
+status: {}

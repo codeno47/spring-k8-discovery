@@ -1,0 +1,12 @@
+apiVersion: skaffold/v2beta1
+kind: Config
+metadata:
+  name: ratings-data-service
+build:
+  artifacts:
+  - image: cycloides/ratingdataservice
+deploy:
+  kubectl:
+    manifests:
+    - deployment.yaml
+    - service.yaml
